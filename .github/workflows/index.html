@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique de Légumes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Boutique de Légumes</h1>
+        <nav>
+            <ul>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#panier">Panier (<span id="panier-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produits">
+            <h2>Nos Légumes</h2>
+            <div class="produit">
+                <img src="images/carottes.jpg" alt="Carottes">
+                <h3>Carottes</h3>
+                <p>Prix : 2€</p>
+                <button onclick="ajouterAuPanier('Carottes', 2)">Ajouter au panier</button>
+            </div>
+            <div class="produit">
+                <img src="images/tomates.jpg" alt="Tomates">
+                <h3>Tomates</h3>
+                <p>Prix : 3€</p>
+                <button onclick="ajouterAuPanier('Tomates', 3)">Ajouter au panier</button>
+            </div>
+            <div class="produit">
+                <img src="images/salades.jpg" alt="Salades">
+                <h3>Salades</h3>
+                <p>Prix : 1.5€</p>
+                <button onclick="ajouterAuPanier('Salades', 1.5)">Ajouter au panier</button>
+            </div>
+        </section>
+
+        <section id="panier">
+            <h2>Votre Panier</h2>
+            <ul id="panier-items"></ul>
+            <p>Total : <span id="panier-total">0</span>€</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Email : contact@boutiquedelegumes.com</p>
+            <p>Suivez-nous sur les réseaux sociaux :</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Boutique de Légumes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
